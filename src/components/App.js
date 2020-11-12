@@ -1,15 +1,21 @@
-import logo from "../logo.svg";
-import "../stylesheets/App.css";
+import React from "react";
+import PokeJson from "../data/PokeJson.json";
+import PokeList from "./PokeList.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>hola mundo</p>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    console.log(PokeJson);
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Pokedex</h1>
+        </header>
+        <main className="pokeMain">
+          <PokeList Pokemon={PokeJson} />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
