@@ -22,3 +22,6 @@
   list-style-type: none;
   text-transform: capitalize;
 }
+.cards {
+  border: blue;
+}
