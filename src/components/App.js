@@ -4,7 +4,6 @@ import PokeList from "./PokeList.js";
 
 class App extends React.Component {
   render() {
-    console.log(PokeJson);
     return (
       <div className="App">
         <header className="App-header">

@@ -3,11 +3,12 @@ import Pokemon from "./Pokemon.js";
 
 class PokeList extends React.Component {
   render() {
-    return (
-      <div className="mainList">
-        <Pokemon />
-      </div>
-    );
+    const items = this.props.Pokemon.map((poke) => {
+      console.log(poke.name);
+      return <Pokemon name={poke.name} />;
+    });
+
+    return <div className="mainList">{items}</div>;
   }
 }
 
