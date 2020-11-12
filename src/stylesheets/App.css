@@ -22,3 +22,12 @@
   list-style-type: none;
   text-transform: capitalize;
 }
+.types {
+  background-color: red;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  border-radius: 10px;
+}
