@@ -1,6 +1,7 @@
 import React from "react";
 import PokeJson from "../data/PokeJson.json";
 import PokeList from "./PokeList.js";
+import "../stylesheets/App.css";
 
 class App extends React.Component {
   render() {
