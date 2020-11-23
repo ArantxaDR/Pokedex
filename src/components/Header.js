@@ -4,7 +4,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="App-header">
-        <h1>Pokedex</h1>
+        <img src="../stylesheets/Pokemon.png" alt="Catch them all" />
       </header>
     );
   }
