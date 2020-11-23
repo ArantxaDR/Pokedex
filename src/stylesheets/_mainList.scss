@@ -1,19 +1,46 @@
 .pokeMain {
-  height: 100vh;
+  padding-left: 50px;
 }
-.mainList {
+.mainList_item {
+  margin-top: 50px;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  list-style-type: none;
+  gap: 10px;
   text-transform: capitalize;
 }
-.types {
-  background-color: red;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  list-style-type: none;
-  border-radius: 10px;
+.favourite {
+  border-color: #70a89e;
+  background-color: #696969;
+}
+.cards {
+  border: red solid 5px;
+  border-radius: 60px;
+  width: 200px;
+  height: 300px;
+
+  &_names {
+    margin-left: 5px;
+    padding-left: 5px;
+    background-color: lightcoral;
+    font-family: "Pokemon";
+    width: 180px;
+    border-radius: 20px;
+  }
+  &_types {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60px;
+
+    &_item {
+      margin-bottom: 10px;
+      align-items: center;
+      background-color: lightyellow;
+      height: 30px;
+      width: 80px;
+      border-radius: 50px;
+    }
+  }
 }

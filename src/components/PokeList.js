@@ -8,22 +8,22 @@ function PokeList(props) {
   const pokemonList = props.data.map((pokemonItem) => {
     const { id, name, types, url } = pokemonItem;
     return (
-      <li
+      <div
         key={id}
         id={id}
         className={
           props.favorites.includes(parseInt(id))
-            ? "PokeList__item PokeList__item--fav"
-            : "PokeList__item"
+            ? "mainList mainList__item--fav"
+            : "mainList__item"
         }
         onClick={handleClick}
       >
-        <Pokemon name={name} types={types} image={url} />
-      </li>
+        <Pokemon className="favourite" name={name} types={types} image={url} />
+      </div>
     );
   });
 
-  return <ul className="mainList">{pokemonList}</ul>;
+  return <div className="mainList_item">{pokemonList}</div>;
 }
 
 export default PokeList;

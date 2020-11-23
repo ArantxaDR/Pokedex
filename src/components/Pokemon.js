@@ -4,21 +4,19 @@ import PropTypes from "prop-types";
 const Pokemon = (props) => {
   const pokemonTypes = props.types.map((pokemonType, index) => {
     return (
-      <li key={index} className="Pokemon__typesList--item">
+      <div key={index} className="cards_types_item">
         {pokemonType}
-      </li>
+      </div>
     );
   });
 
   return (
     <article className="cards">
       <img src={props.image} alt={props.name} />
-      <div>
-        <h2 className="name">{props.name}</h2>
+      <div className="cards_names">
+        <h2>{props.name}</h2>
       </div>
-      <div>
-        <ul className="types">{pokemonTypes}</ul>
-      </div>
+      <div className="cards_types">{pokemonTypes}</div>
     </article>
   );
 };
