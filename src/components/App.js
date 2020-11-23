@@ -1,6 +1,6 @@
 import PokeJson from "../data/PokeJson.json";
 import PokeList from "./PokeList.js";
-import "../stylesheets/App.css";
+import "../stylesheets/App.scss";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import React, { useState } from "react";
