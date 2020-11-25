@@ -11,7 +11,7 @@ const Pokemon = (props) => {
   });
 
   return (
-    <article className="cards">
+    <article className="cards ">
       <img src={props.image} alt={props.name} />
       <div className="cards_names">
         <h2>{props.name}</h2>

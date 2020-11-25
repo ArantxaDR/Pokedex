@@ -10,17 +10,17 @@
   gap: 10px;
   text-transform: capitalize;
 }
-.favourite {
-  border-color: #70a89e;
-  background-color: #696969;
-}
 .cards {
   border: red solid 5px;
   border-radius: 60px;
   width: 200px;
   height: 300px;
+  &_favourite {
+    background-color: darkgoldenrod;
+  }
 
   &_names {
+    color: rgb(73, 122, 124);
     margin-left: 5px;
     padding-left: 5px;
     background-color: lightcoral;

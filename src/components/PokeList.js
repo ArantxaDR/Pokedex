@@ -13,12 +13,12 @@ function PokeList(props) {
         id={id}
         className={
           props.favorites.includes(parseInt(id))
-            ? "mainList mainList__item--fav"
+            ? "cards cards_favourite "
             : "mainList__item"
         }
         onClick={handleClick}
       >
-        <Pokemon className="favourite" name={name} types={types} image={url} />
+        <Pokemon name={name} types={types} image={url} />
       </div>
     );
   });
