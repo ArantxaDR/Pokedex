@@ -1,35 +1,30 @@
-import PokeJson from "../data/PokeJson.json";
 import PokeList from "./PokeList.js";
+import PokeFilters from "./PokeFilters.js";
 import "../stylesheets/App.scss";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
-import React, { useState } from "react";
+import PokeDetails from "./PokeDetails.js";
+import React, { useEffect } from "react";
+import GetDataFromApi from "../services/GetDataFromApi.js";
 
-function App() {
-  const [data] = useState(PokeJson);
-  const [favorites, setFavorites] = useState([]);
-
-  const handleClick = (id) => {
-    if (!favorites.includes(id)) {
-      const newFavorites = [...favorites, id];
-      setFavorites(newFavorites);
-    } else {
-      const newFavorites = favorites.filter((favorite) => {
-        return favorite !== id;
-      });
-      setFavorites(newFavorites);
-    }
-  };
+const App = () => {
+  useEffect(() => {
+    GetDataFromApi().then((data) => {
+      console.log(data);
+    });
+  });
 
   return (
-    <div className="App">
-      <Header />
-      <main className="pokeMain">
-        <PokeList data={data} handleClick={handleClick} favorites={favorites} />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <PokeFilters />
+        <PokeList />
+        <PokeDetails />
+        <Footer />
+      </div>
+    </>
   );
-}
+};
 
 export default App;

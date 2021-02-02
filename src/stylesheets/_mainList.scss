@@ -15,9 +15,6 @@
   border-radius: 60px;
   width: 200px;
   height: 300px;
-  &_favourite {
-    background-color: darkgoldenrod;
-  }
 
   &_names {
     color: rgb(73, 122, 124);
@@ -33,9 +30,11 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 60px;
+    margin-top: 20px;
 
     &_item {
       margin-bottom: 10px;
+      padding-top: 10px;
       align-items: center;
       background-color: lightyellow;
       height: 30px;
@@ -43,4 +42,12 @@
       border-radius: 50px;
     }
   }
+}
+.favourite {
+  background-color: red;
+  width: 200px;
+  height: 300px;
+  border-radius: 60px;
+  width: 200px;
+  border: #f7de84 solid 5px;
 }

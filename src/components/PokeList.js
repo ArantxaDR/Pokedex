@@ -1,29 +1,14 @@
 import Pokemon from "./Pokemon";
+import React from "react";
 
-function PokeList(props) {
-  const handleClick = (ev) => {
-    props.handleClick(parseInt(ev.currentTarget.id));
-  };
+const Pokelist = () => {
+  return (
+    <section>
+      <ul className="cards">
+        <Pokemon />
+      </ul>
+    </section>
+  );
+};
 
-  const pokemonList = props.data.map((pokemonItem) => {
-    const { id, name, types, url } = pokemonItem;
-    return (
-      <div
-        key={id}
-        id={id}
-        className={
-          props.favorites.includes(parseInt(id))
-            ? "cards cards_favourite "
-            : "mainList__item"
-        }
-        onClick={handleClick}
-      >
-        <Pokemon name={name} types={types} image={url} />
-      </div>
-    );
-  });
-
-  return <div className="mainList_item">{pokemonList}</div>;
-}
-
-export default PokeList;
+export default Pokelist;

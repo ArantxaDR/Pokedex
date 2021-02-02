@@ -1,8 +1,9 @@
-.window {
-  background: url(../stylesheets/imgs/pokemonback.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+* {
+  box-sizing: border-box;
 }
 .App {
   text-align: center;
+  background: url(../stylesheets/imgs/pokemonback.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }

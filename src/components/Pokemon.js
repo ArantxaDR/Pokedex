@@ -1,35 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const Pokemon = (props) => {
-  const pokemonTypes = props.types.map((pokemonType, index) => {
-    return (
-      <div key={index} className="cards_types_item">
-        {pokemonType}
-      </div>
-    );
-  });
-
+const Pokemon = () => {
   return (
-    <article className="cards ">
-      <img src={props.image} alt={props.name} />
-      <div className="cards_names">
-        <h2>{props.name}</h2>
-      </div>
-      <div className="cards_types">{pokemonTypes}</div>
-    </article>
+    <li className="card">
+      <img className="card__img" src="" alt="" />
+      <h4 className="card__title">Pokemon</h4>
+      <p className="card__description">Tipo de pokemon</p>
+    </li>
   );
 };
 
-Pokemon.defaultProps = {
-  name: "Pokemon anónimo",
-  image: "../imgs/faviconpokeball.png",
-  types: "No pertenece a ningún tipo",
-};
-
-Pokemon.propTypes = {
-  name: PropTypes.string,
-  img: PropTypes.string,
-  types: PropTypes.array,
-};
 export default Pokemon;
