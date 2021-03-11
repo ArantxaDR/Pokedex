@@ -1,4 +1,4 @@
-# Pokedek. ¡Hazte con todos!
+# Pokedek. ¡Hazte con todos! (En proceso de mejora)
 
 Proyecto de evaluación intermedia del módulo de React en el bootcamp de Adalab (promoK).
 
